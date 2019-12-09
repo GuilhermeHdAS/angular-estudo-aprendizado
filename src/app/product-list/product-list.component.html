@@ -1,5 +1,38 @@
 <h2>Produtos</h2>
 
+<!-- Para exibir um produto, eu quero que cada produto seja exibido da mesma maneira, um após o outro na página.
+Para iterar na lista predefinida de produtos eu preciso colocar uma diretiva estrutural, que no caso é a *ngFor.
+As diretivas estruturais moldam ou remodelam a estrutura do DOM, geralmente adcionando, removendo e manipulando
+elementos aos quais estão anexados. Qualquer diretiva com um asterisco * é uma diretiva estrutural.
+ -->
+
+<div *ngFor = "let product of products">
+
+    <!-- Se eu quiser exibir alguma coisa, como os nomes dos produtos eu preciso usar uma sintaxe de interpolação
+    que é {{}} essa que acabei de apresentar, uma chave dentro da outra.
+    Aqui estou criando um título (que é o que está dentro do meu h3: {{ product.name }}) e o que está dentro do meu <a> é meu "detalhe, meu subtítulo, uma identificação"
+     -->
+    
+    <h3><a [title] = "product.name + ' detalhes'">
+        {{ product.name }}
+    </a></h3>
+
+    <!-- Usar uma diretiva para que Angular crie o elemento apenas se o produto atual tiver uma descrição.*ngIf<p> -->
+    <p *ngIf = "product.description">
+      Descrição: {{ product.description }}
+    </p>
+
+    <!-- Criando o botão compartilhe, que quando clicado executará o método "share" que está na minha classe product-list.component.ts -->
+    <button (click) = "share()">
+      Compartilhe <i class="material-icons" id="compartilhar"> share </i>
+    </button>
+
+    <!-- Aqui eu chamo meu método onNotify para meu selector app-product-alerts -->
+    <app-product-alerts
+        [product]="product" (notify)="onNotify()">
+    </app-product-alerts>
+
+</div>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.

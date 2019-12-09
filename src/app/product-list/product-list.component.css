@@ -1,4 +1,9 @@
+/* Alterando o estilo do meu botão com o ID compartilhar, pois quando eu coloco o botão, ele possui a cor cinza */
 
+#compartilhar{
+  color: white;
+  margin-left: 5px;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.

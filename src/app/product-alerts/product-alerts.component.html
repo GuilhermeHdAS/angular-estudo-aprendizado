@@ -1,0 +1,4 @@
+<!-- O que acontece aqui é que quando o produto for maior do que 700 aparecerá o botão de notificar-me, se aparece esse botão, quando clicá-lo eu quero que ele chame meu método notify -->
+<p *ngIf="product.price > 700">
+    <button (click) = "notify.emit()">Notificar-me</button>
+</p>
