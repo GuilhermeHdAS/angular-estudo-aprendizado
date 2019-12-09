@@ -1,18 +1,18 @@
 export const products = [
   {
-    name: 'Celular XL',
-    price: 799,
-    description: 'Um telefone único com a melhor câmera do mercado para que você possa fazer suas fotos e se divertir com a galera.'
+    nome: 'Celular XL',
+    preco: 799,
+    descricao: 'Um telefone único com a melhor câmera do mercado para que você possa fazer suas fotos e se divertir com a galera.'
   },
   {
-    name: 'Celular Mini',
-    price: 699,
-    description: 'Um ótimo telefone, uma versão menor para você que prefere celulares pequenos, com todas as funcionalidade do Phone XL, compactado para caber no seu bolso.'
+    nome: 'Celular Mini',
+    preco: 699,
+    descricao: 'Um ótimo telefone, uma versão menor para você que prefere celulares pequenos, com todas as funcionalidade do Phone XL, compactado para caber no seu bolso.'
   },
   {
-    name: 'Celular Standard',
-    price: 299,
-    description: 'Um telefone com uma câmera ótima para fazer selfies com a galera, cabe no bolso e possui um precinho camarada para que você possa aproveitar da nossa promoção.'
+    nome: 'Celular Standard',
+    preco: 299,
+    descricao: 'Um telefone com uma câmera ótima para fazer selfies com a galera, cabe no bolso e possui um precinho camarada para que você possa aproveitar da nossa promoção.'
   }
 ];
 
