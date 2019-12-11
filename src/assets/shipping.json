@@ -1,14 +1,14 @@
 [
   {
-    "type": "Overnight",
+    "type": "1 dia útil",
     "price": 25.99
   },
   {
-    "type": "2-Day",
+    "type": "Até 1 semana",
     "price": 9.99
   },
   {
-    "type": "Postal",
+    "type": "Dentro de 15 dias",
     "price": 2.99
   }
 ]

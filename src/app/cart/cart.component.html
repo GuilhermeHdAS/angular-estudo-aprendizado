@@ -1,0 +1,10 @@
+<h3>Carrinho</h3>
+
+<p>
+  <a routerLink="/shipping">Taxas de entrega</a>
+</p>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span id="nome">{{ item.nome }}</span>
+  <span id="preco">R$ {{ item.preco }},00</span>
+<div>

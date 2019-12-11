@@ -1,1 +1,5 @@
 /* Qualquer aparência visual que eu quiser alterar para products alerts */
+#notificacao{
+  color: white;
+  margin-left: 5px;
+}
