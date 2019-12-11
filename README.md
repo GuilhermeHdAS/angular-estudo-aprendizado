@@ -1,4 +1,4 @@
-# angular-estudo-aprendizado
+# Angular
 
 O editor que usei foi:
 
