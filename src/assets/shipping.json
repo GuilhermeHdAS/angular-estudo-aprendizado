@@ -1,14 +1,14 @@
 [
   {
-    "type": "1 dia útil",
-    "price": 25.99
+    "tipo": "1 dia útil",
+    "preco": 25.99
   },
   {
-    "type": "Até 1 semana",
-    "price": 9.99
+    "tipo": "Até 1 semana",
+    "preco": 9.99
   },
   {
-    "type": "Dentro de 15 dias",
-    "price": 2.99
+    "tipo": "Dentro de 15 dias",
+    "preco": 2.99
   }
 ]
