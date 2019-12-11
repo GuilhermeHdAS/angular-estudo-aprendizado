@@ -1,0 +1,8 @@
+<h2>Mais detalhes sobre o produto</h2>
+
+<!-- Se product for true, ou seja, se ele existir eu exibo seus detalhes -->
+<div *ngIf = "product">
+  <h3>{{ product.nome }}</h3>
+  <h4>R$ {{ product.preco}},00</h4>
+  <p>{{ product.descricao }}</p>
+</div>

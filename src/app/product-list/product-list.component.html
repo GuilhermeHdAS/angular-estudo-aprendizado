@@ -4,16 +4,17 @@
 Para iterar na lista predefinida de produtos eu preciso colocar uma diretiva estrutural, que no caso é a *ngFor.
 As diretivas estruturais moldam ou remodelam a estrutura do DOM, geralmente adcionando, removendo e manipulando
 elementos aos quais estão anexados. Qualquer diretiva com um asterisco * é uma diretiva estrutural.
+Em index as productId, o que eu tô falando? Aqui eu estou pegando o índice de cada produto, a sua posição, 0,1,...,n e estou chamando de productId
  -->
 
-<div *ngFor = "let product of products">
+<div *ngFor = "let product of products; index as productId">
 
     <!-- Se eu quiser exibir alguma coisa, como os nomes dos produtos eu preciso usar uma sintaxe de interpolação
     que é {{}} essa que acabei de apresentar, uma chave dentro da outra.
     Aqui estou criando um título (que é o que está dentro do meu h3: {{ product.name }}) e o que está dentro do meu <a> é meu "detalhe, meu subtítulo, uma identificação"
      -->
     
-    <h3><a [title] = "product.nome + ' detalhes'">
+    <h3><a [title] = "product.nome + ' detalhes'" [routerLink] = "['/products', productId]">
         {{ product.nome }}
     </a></h3>
 
@@ -21,10 +22,6 @@ elementos aos quais estão anexados. Qualquer diretiva com um asterisco * é uma
     <p *ngIf = "product.descricao">
       Descrição: {{ product.descricao }}
     </p>
-
-    <h3 *ngIf = "product.preco">
-        R$ {{ product.preco }}
-    </h3>
 
     <!-- Criando o botão compartilhe, que quando clicado executará o método "share" que está na minha classe product-list.component.ts -->
     <button (click) = "share()">
