@@ -4,7 +4,7 @@ O editor que usei foi:
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-estudo-aprendizado)
 
-# Para fazer o projeto localmente
+## Para fazer o projeto localmente
 
 **Passo 1:** Instalar o Node.js em sua máquina, baixe no link: [Node.Js](https://nodejs.org/en/)
 
