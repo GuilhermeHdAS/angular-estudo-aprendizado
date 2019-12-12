@@ -10,8 +10,10 @@ export class ShippingComponent implements OnInit {
 
   shippingCosts;
 
+  // pegando os serviços do meu carrinho de compras
   constructor( private cartService: CartService) { }
 
+  // Pegando as informações que meu serviço pode me oferecer
   ngOnInit() {
     this.shippingCosts = this.cartService.getRemessaDePrecos();
   }

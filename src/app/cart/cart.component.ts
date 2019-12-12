@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { CartService } from '../cart.service'
 
 // Observa-se aqui um decorator, meus componentes, que são:
@@ -13,11 +14,31 @@ import { CartService } from '../cart.service'
 export class CartComponent implements OnInit {
 
   items;
+  checkoutForm;
 
-  constructor(private cartService: CartService) { }
+  // Pegando os serviços que meu carrinho pode oferecer e o que posso aproveitar do meu formBuilder
+  constructor(private cartService: CartService, private formBuilder: FormBuilder) {
+    // Pegando o array dos produtos que estão dentro do carrinho
+    this.items = this.cartService.getItems();
+
+    this.checkoutForm = this.formBuilder.group({
+      name: '',
+      address: ''
+    });
+  }
+
+  onSubmit (customerData) {
+
+    // processar os dados do forms arquivo
+    console.warn("Seu pedido foi enviado", customerData);
+
+    this.items = this.cartService.limparCarrinho();
+    this.checkoutForm.reset();
+
+  }
 
   ngOnInit() {
-    this.items = this.cartService.getItems();
+    
   }
 
 }

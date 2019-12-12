@@ -28,6 +28,7 @@ export class CartService {
     return this.items;
   }
 
+  // Pega os dados do meu arquivo JSON com as infromações que preciso sobre entrega
   getRemessaDePrecos(){
     return this.http.get('/assets/shipping.json');
   }
